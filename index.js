@@ -82,7 +82,7 @@ router.get('/admin', async (req, res) => {
 })
 
 
-router.post("/admin/signup",async(req,res)=>{
+router.post("/admin-signup",async(req,res)=>{
     try{
         const client = await mongoClient.connect(DB_URL);
     const db = client.db('attandance');
@@ -108,7 +108,7 @@ res.status(200).json({
     }
 })
 
-router.post ("/admin/login", async(req,res)=>{
+router.post ("/admin-login", async(req,res)=>{
     try{
         let client = await mongoClient.connect(DB_URL);
         let db = client.db('attandance');
@@ -183,7 +183,7 @@ router.delete('/delete-user', async (req, res) => {
 //user route
 
 
-router.post ("/user/signup", async(req,res)=>{
+router.post ("/user-signup", async(req,res)=>{
     try{
         const client = await mongoClient.connect(DB_URL);
         const db = client.db("attandance");
@@ -221,7 +221,7 @@ res.status(200).json({
 
 
 
-router.post ("/user/login", async(req,res)=>{
+router.post ("/user-login", async(req,res)=>{
     try{
         let client = await mongoClient.connect(DB_URL);
         let db = client.db('attandance');
